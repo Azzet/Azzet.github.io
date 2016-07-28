@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="styles.css">
+	<title>MemeHats</title>
+</head>
+
+<script> 
+function faceRandom(number) {
+	var pic;
+
+    if (number == 1) {
+        pic = "faces/1.png"
+    } else if (number == 2) {
+        pic = "faces/2.png"
+    }	else if (number == 3) {
+        pic = "faces/3.png"
+    } else {
+        pic = "faces/4.png"
+    }
+	
+    document.getElementById('myImage').src = pic;
+}
+
+function hatRandom(number) {
+	var pic;
+
+    if (number == 1) {
+        pic = "hats/1.png"
+    } else if (number == 2) {
+        pic = "hats/2.png"
+    } else if (number == 3)  {
+        pic = "hats/3.png"
+    } else if (number == 4) {
+        pic = "hats/4.png"
+    } else if (number == 5)  {
+        pic = "hats/5.png"
+    } else if (number == 6)  {
+        pic = "hats/6.png"
+    } else {
+        pic = "hats/7.png"
+    }
+	
+    document.getElementById('myHat').src = pic;
+}
+</script>
+
+<body>
+
+
+<div id="face">
+
+	<img id="myImage" src= "faces/3.png">
+		<div class="hat">
+			<img id="myHat" src="hats/6.png">
+		</div>
+</div>
+
+<p>
+<button class="generateButton" type="button" onclick="faceRandom(Math.floor(Math.random() * (4 + 1) + 1)); hatRandom(Math.floor(Math.random() * (7 + 1) + 1));">Generate</button>
+</p>
+
+</body>
+</html>
